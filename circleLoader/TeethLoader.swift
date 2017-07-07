@@ -29,10 +29,10 @@ class TeethLoaderView : UIView {
         didSet {setNeedsDisplay()}
     }
     
-    private var progress = 0.0 // The progress of the loader
-    private var pathSegments = [UIBezierPath]() // The array containing the UIBezier paths
-    private var displayLink : CADisplayLink? // The display link to update the progress
-    private var teethHighlighted = 0 // Number of teeth highlighted
+    fileprivate var progress = 0.0 // The progress of the loader
+    fileprivate var pathSegments = [UIBezierPath]() // The array containing the UIBezier paths
+    fileprivate var displayLink : CADisplayLink? // The display link to update the progress
+    fileprivate var teethHighlighted = 0 // Number of teeth highlighted
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,8 +44,8 @@ class TeethLoaderView : UIView {
         commonSetup()
     }
     
-    private func commonSetup() {
-        self.backgroundColor = UIColor.white()
+    fileprivate func commonSetup() {
+        self.backgroundColor = UIColor.white
     }
     
     override func layoutSubviews() {
@@ -57,7 +57,7 @@ class TeethLoaderView : UIView {
         displayLink?.invalidate()
         
         displayLink = CADisplayLink(target: self, selector: #selector(_displayLinkDidFire))
-        displayLink?.add(to: RunLoop.main(), forMode: RunLoopMode.commonModes.rawValue)
+        displayLink?.add(to: RunLoop.main, forMode: RunLoopMode(rawValue: RunLoopMode.commonModes.rawValue))
     }
     
     func stopAnimation() {
@@ -88,8 +88,8 @@ class TeethLoaderView : UIView {
         
         let ctx = UIGraphicsGetCurrentContext()
         
-        ctx?.scale(x: -1, y: -1) // Flip the context to the correct orientation
-        ctx?.translate(x: -rect.size.width, y: -rect.size.height)
+        ctx?.scaleBy(x: -1, y: -1) // Flip the context to the correct orientation
+        ctx?.translateBy(x: -rect.size.width, y: -rect.size.height)
         
         for (index, path) in pathSegments.enumerated() { // Draw each 'tooth'
             
@@ -102,16 +102,16 @@ class TeethLoaderView : UIView {
         }
     }
     
-    private func updatePathSegments() {
-        pathSegments = getPathSegments(size: frame.size, teethCount: numberOfTeeth, teethSize: teethSize, radius: ((frame.width*0.5)-teethSize.height))
+    fileprivate func updatePathSegments() {
+        pathSegments = getPathSegments(frame.size, teethCount: numberOfTeeth, teethSize: teethSize, radius: ((frame.width*0.5)-teethSize.height))
         setNeedsDisplay()
     }
     
-    private func getPathSegments(size:CGSize, teethCount:Int, teethSize:CGSize, radius:CGFloat) -> [UIBezierPath] {
+    fileprivate func getPathSegments(_ size:CGSize, teethCount:Int, teethSize:CGSize, radius:CGFloat) -> [UIBezierPath] {
         
         let halfHeight = size.height*0.5
         let halfWidth = size.width*0.5
-        let deltaAngle = CGFloat(2*M_PI)/CGFloat(teethCount) // The change in angle between paths
+        let deltaAngle = CGFloat(2*Double.pi)/CGFloat(teethCount) // The change in angle between paths
         
         // Create the template path of a single shape.
         let segment = CGPath(rect: CGRect(x: -teethSize.width*0.5, y: radius, width: teethSize.width, height: teethSize.height), transform: nil)
@@ -119,7 +119,7 @@ class TeethLoaderView : UIView {
         return (0..<teethCount).flatMap { i in  // Copy, translate and rotate shapes around
             
             let translate = CGAffineTransform(translationX: halfWidth, y: halfHeight)
-            var rotate = translate.rotate(deltaAngle*CGFloat(i))
+            var rotate = translate.rotated(by:deltaAngle*CGFloat(i))
             let transformedSegment = segment.copy(using: &rotate)
             
             assert(transformedSegment != nil, "Unable to copy path by applying a transform")

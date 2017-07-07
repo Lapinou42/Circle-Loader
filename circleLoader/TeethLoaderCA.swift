@@ -33,10 +33,10 @@ class TeethLoaderViewCA : UIView {
         }
     }
     
-    private let shapeLayer = CAShapeLayer() // The teeth shape layer
-    private let drawLayer = CAShapeLayer() // The arc fill layer
+    fileprivate let shapeLayer = CAShapeLayer() // The teeth shape layer
+    fileprivate let drawLayer = CAShapeLayer() // The arc fill layer
     
-    private let anim = CABasicAnimation(keyPath: "strokeEnd") // The stroke animation
+    fileprivate let anim = CABasicAnimation(keyPath: "strokeEnd") // The stroke animation
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,10 +48,10 @@ class TeethLoaderViewCA : UIView {
         commonSetup()
     }
     
-    private func commonSetup() {
+    fileprivate func commonSetup() {
         
         // set your background color
-        self.backgroundColor = UIColor.white()
+        self.backgroundColor = UIColor.white
 
         // Creates an arc path, with a given offset to allow it to be presented nicely
         drawLayer.fillColor = toothInactiveColor.cgColor
@@ -70,9 +70,9 @@ class TeethLoaderViewCA : UIView {
         
         let halfWidth = frame.size.width*0.5
         let halfHeight = frame.size.height*0.5
-        let halfDeltaAngle = CGFloat(M_PI)/CGFloat(numberOfTeeth)
+        let halfDeltaAngle = CGFloat(Double.pi)/CGFloat(numberOfTeeth)
 
-        drawLayer.path = UIBezierPath(arcCenter: CGPoint(x: halfWidth, y: halfHeight), radius: halfWidth, startAngle: CGFloat(-M_PI_2)-halfDeltaAngle, endAngle: CGFloat(M_PI*1.5)+halfDeltaAngle, clockwise: true).cgPath
+        drawLayer.path = UIBezierPath(arcCenter: CGPoint(x: halfWidth, y: halfHeight), radius: halfWidth, startAngle: CGFloat(-Double.pi/2)-halfDeltaAngle, endAngle: CGFloat(Double.pi*1.5)+halfDeltaAngle, clockwise: true).cgPath
         drawLayer.frame = frame
         drawLayer.lineWidth = halfWidth
     }
@@ -92,15 +92,15 @@ class TeethLoaderViewCA : UIView {
         CATransaction.commit()
     }
     
-    private func updateLayerMask() {
+    fileprivate func updateLayerMask() {
         shapeLayer.path = getLayerMask(frame.size, teethCount: numberOfTeeth, teethSize: teethSize, radius: ((frame.width*0.5)-teethSize.height))
     }
 
-    private func getLayerMask(_ size:CGSize, teethCount:Int, teethSize:CGSize, radius:CGFloat) -> CGPath? {
+    fileprivate func getLayerMask(_ size:CGSize, teethCount:Int, teethSize:CGSize, radius:CGFloat) -> CGPath? {
         
         let halfHeight = size.height*0.5
         let halfWidth = size.width*0.5
-        let deltaAngle = CGFloat(2*M_PI)/CGFloat(teethCount); // The change in angle between paths
+        let deltaAngle = CGFloat(2*Double.pi)/CGFloat(teethCount); // The change in angle between paths
         
         // Create the template path of a single shape.
         let p = CGPath(rect: CGRect(x: -teethSize.width*0.5, y: radius, width: teethSize.width, height: teethSize.height), transform: nil)
@@ -109,8 +109,8 @@ class TeethLoaderViewCA : UIView {
         
         for i in 0..<teethCount { // Copy, translate and rotate shapes around
             let translate = CGAffineTransform(translationX: halfWidth, y: halfHeight)
-            var rotate = translate.rotate(deltaAngle*CGFloat(i))
-            returnPath.addPath(&rotate, path: p)
+            let rotate = translate.rotated(by: deltaAngle*CGFloat(i))
+            returnPath.addPath(p, transform: rotate)
         }
         
         return returnPath.copy()

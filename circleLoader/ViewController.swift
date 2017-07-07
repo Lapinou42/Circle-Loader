@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let circle = TeethLoaderViewCA(frame: UIScreen.main().bounds) // comment for core graphics version
+    let circle = TeethLoaderViewCA(frame: UIScreen.main.bounds) // comment for core graphics version
     
     //let circle = TeethLoaderView(frame: UIScreen.main().bounds) // uncomment for core graphics version
     
@@ -23,8 +23,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     // Example function showing the animate() function working.
@@ -33,11 +31,8 @@ class ViewController: UIViewController {
         circle.animate(from:0.6, to:1)
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
-    
-    
-    
 }
 

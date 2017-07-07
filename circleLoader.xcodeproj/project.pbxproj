@@ -14,26 +14,7 @@
 		1CD39E041C52E4C800736BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD39E021C52E4C800736BCD /* Main.storyboard */; };
 		1CD39E061C52E4C800736BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD39E051C52E4C800736BCD /* Assets.xcassets */; };
 		1CD39E091C52E4C800736BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD39E071C52E4C800736BCD /* LaunchScreen.storyboard */; };
-		1CD39E141C52E4C900736BCD /* loaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD39E131C52E4C900736BCD /* loaderTests.swift */; };
-		1CD39E1F1C52E4C900736BCD /* loaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD39E1E1C52E4C900736BCD /* loaderUITests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1CD39E101C52E4C900736BCD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1CD39DF31C52E4C800736BCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1CD39DFA1C52E4C800736BCD;
-			remoteInfo = loader;
-		};
-		1CD39E1B1C52E4C900736BCD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1CD39DF31C52E4C800736BCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1CD39DFA1C52E4C800736BCD;
-			remoteInfo = loader;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1CAA2B851CB673F60012DC9C /* TeethLoaderCA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeethLoaderCA.swift; sourceTree = "<group>"; };
@@ -45,30 +26,14 @@
 		1CD39E051C52E4C800736BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CD39E081C52E4C800736BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CD39E0A1C52E4C800736BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CD39E0F1C52E4C900736BCD /* circleLoader.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = circleLoader.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD39E131C52E4C900736BCD /* loaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loaderTests.swift; sourceTree = "<group>"; };
 		1CD39E151C52E4C900736BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CD39E1A1C52E4C900736BCD /* circleLoader.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = circleLoader.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD39E1E1C52E4C900736BCD /* loaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loaderUITests.swift; sourceTree = "<group>"; };
 		1CD39E201C52E4C900736BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1CD39DF81C52E4C800736BCD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CD39E0C1C52E4C900736BCD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CD39E171C52E4C900736BCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				1CD39DFB1C52E4C800736BCD /* circleLoader.app */,
-				1CD39E0F1C52E4C900736BCD /* circleLoader.xctest */,
-				1CD39E1A1C52E4C900736BCD /* circleLoader.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,42 +116,6 @@
 			productReference = 1CD39DFB1C52E4C800736BCD /* circleLoader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1CD39E0E1C52E4C900736BCD /* circleLoaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1CD39E261C52E4C900736BCD /* Build configuration list for PBXNativeTarget "circleLoaderTests" */;
-			buildPhases = (
-				1CD39E0B1C52E4C900736BCD /* Sources */,
-				1CD39E0C1C52E4C900736BCD /* Frameworks */,
-				1CD39E0D1C52E4C900736BCD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1CD39E111C52E4C900736BCD /* PBXTargetDependency */,
-			);
-			name = circleLoaderTests;
-			productName = loaderTests;
-			productReference = 1CD39E0F1C52E4C900736BCD /* circleLoader.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1CD39E191C52E4C900736BCD /* circleLoaderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1CD39E291C52E4C900736BCD /* Build configuration list for PBXNativeTarget "circleLoaderUITests" */;
-			buildPhases = (
-				1CD39E161C52E4C900736BCD /* Sources */,
-				1CD39E171C52E4C900736BCD /* Frameworks */,
-				1CD39E181C52E4C900736BCD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1CD39E1C1C52E4C900736BCD /* PBXTargetDependency */,
-			);
-			name = circleLoaderUITests;
-			productName = loaderUITests;
-			productReference = 1CD39E1A1C52E4C900736BCD /* circleLoader.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,22 +123,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Redonkulous Apps";
 				TargetAttributes = {
 					1CD39DFA1C52E4C800736BCD = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
-					};
-					1CD39E0E1C52E4C900736BCD = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
-						TestTargetID = 1CD39DFA1C52E4C800736BCD;
-					};
-					1CD39E191C52E4C900736BCD = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
-						TestTargetID = 1CD39DFA1C52E4C800736BCD;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -229,8 +147,6 @@
 			projectRoot = "";
 			targets = (
 				1CD39DFA1C52E4C800736BCD /* circleLoader */,
-				1CD39E0E1C52E4C900736BCD /* circleLoaderTests */,
-				1CD39E191C52E4C900736BCD /* circleLoaderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,20 +159,6 @@
 				1CD39E091C52E4C800736BCD /* LaunchScreen.storyboard in Resources */,
 				1CD39E061C52E4C800736BCD /* Assets.xcassets in Resources */,
 				1CD39E041C52E4C800736BCD /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CD39E0D1C52E4C900736BCD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CD39E181C52E4C900736BCD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,36 +176,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1CD39E0B1C52E4C900736BCD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1CD39E141C52E4C900736BCD /* loaderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1CD39E161C52E4C900736BCD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1CD39E1F1C52E4C900736BCD /* loaderUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1CD39E111C52E4C900736BCD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1CD39DFA1C52E4C800736BCD /* circleLoader */;
-			targetProxy = 1CD39E101C52E4C900736BCD /* PBXContainerItemProxy */;
-		};
-		1CD39E1C1C52E4C900736BCD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1CD39DFA1C52E4C800736BCD /* circleLoader */;
-			targetProxy = 1CD39E1B1C52E4C900736BCD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1CD39E021C52E4C800736BCD /* Main.storyboard */ = {
@@ -338,8 +211,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -366,6 +241,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -383,8 +259,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -403,6 +281,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -412,10 +291,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/circleLoader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.redonkulousapps.loader;
 				PRODUCT_NAME = circleLoader;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -424,64 +305,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/circleLoader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.redonkulousapps.loader;
 				PRODUCT_NAME = circleLoader;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		1CD39E271C52E4C900736BCD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = loaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redonkulousapps.loaderTests;
-				PRODUCT_NAME = circleLoader;
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circleLoader.app/circleLoader";
-			};
-			name = Debug;
-		};
-		1CD39E281C52E4C900736BCD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = loaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redonkulousapps.loaderTests;
-				PRODUCT_NAME = circleLoader;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/circleLoader.app/circleLoader";
-			};
-			name = Release;
-		};
-		1CD39E2A1C52E4C900736BCD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = loaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redonkulousapps.loaderUITests;
-				PRODUCT_NAME = circleLoader;
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = loader;
-			};
-			name = Debug;
-		};
-		1CD39E2B1C52E4C900736BCD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = loaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redonkulousapps.loaderUITests;
-				PRODUCT_NAME = circleLoader;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = loader;
 			};
 			name = Release;
 		};
@@ -502,24 +333,6 @@
 			buildConfigurations = (
 				1CD39E241C52E4C900736BCD /* Debug */,
 				1CD39E251C52E4C900736BCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1CD39E261C52E4C900736BCD /* Build configuration list for PBXNativeTarget "circleLoaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1CD39E271C52E4C900736BCD /* Debug */,
-				1CD39E281C52E4C900736BCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1CD39E291C52E4C900736BCD /* Build configuration list for PBXNativeTarget "circleLoaderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1CD39E2A1C52E4C900736BCD /* Debug */,
-				1CD39E2B1C52E4C900736BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
